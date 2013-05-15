@@ -1,0 +1,47 @@
+Changes from 2.0.0 to 2.0.1
+---------------------------
+
+** Bug
+    * [FELIX-3196] - Security Problem: Getting full file access within the cache directory from one Bundle
+    * [FELIX-3221] - NPE when uninstall a bundle on enabled OSGi security
+
+Changes from 1.4.2 to 2.0.0
+---------------------------
+** Bug
+    * [FELIX-2648] - Incompatible security provider state when switching from 2.0.4 to 3.0.3
+    * [FELIX-2922] - ArrayIndexOutOfBoundsException when specifying no name
+    * [FELIX-3004] - felix.security does not work with exploded jars 
+    * [FELIX-3101] - ClassCastException in Permissions class
+
+** Improvement
+    * Update to latest framework version 4.0.0
+
+Changes from 1.4.1 to 1.4.2
+---------------------------
+
+** Improvement
+    * Update to latest framework version 3.2.0
+
+Changes from 1.4.0 to 1.4.1
+---------------------------
+
+** Bug
+    * [FELIX-2739] - [Security] Recent framework changes have broken the security provider.
+
+Changes from 1.2.0 to 1.4.0
+---------------------------
+
+** Improvement
+    * [FELIX-2547] - Implement conditionalpermissioninfo encoding/decoding to match the spec.
+
+
+Changes from 1.0.0 to 1.2.0
+---------------------------
+
+** Task
+    * [FELIX-2294] - Patch Framework Security for compatibility
+
+1.0.0
+-----
+
+** Initial Release

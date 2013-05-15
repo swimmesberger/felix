@@ -1,0 +1,23 @@
+Changes from 1.4.0 to 1.4.1
+---------------------------
+
+** Bug
+    * [FELIX-2739] - [Security] Recent framework changes have broken the security provider.
+
+Changes from 1.2.0 to 1.4.0
+---------------------------
+
+** Improvement
+    * [FELIX-2547] - Implement conditionalpermissioninfo encoding/decoding to match the spec.
+
+
+Changes from 1.0.0 to 1.2.0
+---------------------------
+
+** Task
+    * [FELIX-2294] - Patch Framework Security for compatibility
+
+1.0.0
+-----
+
+** Initial Release

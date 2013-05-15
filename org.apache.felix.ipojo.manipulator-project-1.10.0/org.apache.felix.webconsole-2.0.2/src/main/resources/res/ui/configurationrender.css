@@ -1,0 +1,91 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* tabbed view */
+
+#divcfgprttabs {
+}
+
+.divcfgprttabshidden {
+    display: none;
+}
+
+#divcfgprttabs ul { 
+    list-style: none;
+}
+
+#divcfgprttabs ul li {
+    display: inline-block; 
+    background: #fff;
+}
+
+#divcfgprttabs ul li.tabactive {
+}
+
+#divcfgprttabs ul li a {
+    color: #6181A9;
+    background-color: white;
+    display: block;
+    float: left;
+    height: 100%;
+    line-height: 2;
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+}
+
+#divcfgprttabs ul li a.tabactive {
+    background-color: #6181A9;
+    color: white;
+}
+
+#divcfgprttabs ul li a:hover {
+    color: white;
+    background-color: #6181A9;
+}
+
+.menu {
+    background: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.area {
+    background: #fff;
+    border: 1px solid #999;
+    padding: 1px;
+}
+
+/* Contents container of the tabs */
+.tabcont {
+    background: #fff;
+    border: 1px solid #999;
+    border-right: none;
+    padding: 1px;
+}
+
+/* The actual content of the tabs */
+.space {
+    padding: 10px;
+    
+    /* don't let this area make the display wider */
+    width: 100px;
+    overflow: visible;
+}
+
+.space div {
+    font-family: monospace;
+    white-space: pre;
+}

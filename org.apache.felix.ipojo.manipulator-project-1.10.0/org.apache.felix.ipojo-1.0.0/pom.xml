@@ -1,0 +1,145 @@
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements.  See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership.  The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License.  You may obtain a copy of the License at
+	
+	http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	KIND, either express or implied.  See the License for the
+	specific language governing permissions and limitations
+	under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>org.apache.felix</groupId>
+		<artifactId>felix</artifactId>
+		<version>1.0.2</version>
+		<relativePath>../../pom/pom.xml</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>bundle</packaging>
+	<name>Apache Felix iPOJO</name>
+	<artifactId>org.apache.felix.ipojo</artifactId>
+	<groupId>org.apache.felix</groupId>
+	<version>1.0.0</version>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.ipojo.metadata</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.ipojo.manipulator</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>1.4.2</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-Name>iPOJO</Bundle-Name>
+						<Bundle-Vendor>
+							The Apache Software Foundation
+						</Bundle-Vendor>
+						<Bundle-SymbolicName>
+							org.apache.felix.ipojo
+						</Bundle-SymbolicName>
+						<Bundle-Description>
+							iPOJO Core Framework
+						</Bundle-Description>
+						<Bundle-Activator>
+							org.apache.felix.ipojo.Extender
+						</Bundle-Activator>
+						<Bundle-DocURL>
+							http://felix.apache.org/site/apache-felix-ipojo.html
+						</Bundle-DocURL>
+						<IPOJO-Extension>
+							component:org.apache.felix.ipojo.ComponentFactory,
+							handler:org.apache.felix.ipojo.HandlerManagerFactory
+						</IPOJO-Extension>
+						<Import-Package>
+							org.osgi.framework, org.osgi.service.cm,
+							org.osgi.service.log
+						</Import-Package>
+						<Private-Package>
+							org.apache.felix.ipojo.handlers.architecture,
+							org.apache.felix.ipojo.handlers.configuration,
+							org.apache.felix.ipojo.handlers.lifecycle.callback,
+							org.apache.felix.ipojo.handlers.lifecycle.controller
+						</Private-Package>
+						<Export-Package>
+							org.apache.felix.ipojo; version="0.9.0",
+							org.apache.felix.ipojo.metadata;
+							version="0.9.0",
+							org.apache.felix.ipojo.architecture;
+							version="0.9.0",
+							org.apache.felix.ipojo.parser;
+							version="0.9.0",
+							org.apache.felix.ipojo.util;
+							version="0.9.0",
+							org.apache.felix.ipojo.handlers.dependency;
+							version="0.9.0",
+							org.apache.felix.ipojo.handlers.providedservice;
+							version="0.9.0",
+							org.apache.felix.ipojo.context;
+							version="0.9.0", org.osgi.service.cm,
+							org.osgi.service.log
+						</Export-Package>
+						<Include-Resource>
+							META-INF/LICENCE=LICENSE,
+							META-INF/NOTICE=NOTICE
+						</Include-Resource>
+						<_donotcopy>
+							(CVS|.svn|.+.bak|~.+|metadata.xml)
+						</_donotcopy>
+					</instructions>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-ipojo-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>ipojo-bundle</goal>
+						</goals>
+						<configuration>
+							<metadata>metadata.xml</metadata>
+							<ignoreAnnotations>true</ignoreAnnotations>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+  <scm>
+    <connection>scm:svn:https://svn.apache.org/repos/asf/felix/releases/org.apache.felix.ipojo-1.0.0</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/felix/releases/org.apache.felix.ipojo-1.0.0</developerConnection>
+    <url>scm:svn:https://svn.apache.org/repos/asf/felix/releases/org.apache.felix.ipojo-1.0.0</url>
+  </scm>
+</project>

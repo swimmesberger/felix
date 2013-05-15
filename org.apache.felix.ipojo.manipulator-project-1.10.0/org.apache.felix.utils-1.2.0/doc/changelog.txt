@@ -1,0 +1,34 @@
+Changes from 1.1.4 to 1.2.0
+---------------------------
+
+** Improvement
+    * Variables are not preserved during write-back if they are
+      defined as framework properties
+
+** New features
+    * Add a BaseManagedServiceFactory to help writing such factories
+
+Changes from 1.1.2 to 1.1.0
+---------------------------
+
+** Bug
+    * Access to system properties should be done in a priviledged
+      block.
+    * The manifest parser does not correctly handle empty strings.
+
+** Improvement
+    * Add java.util.Properties backward compatibility methods
+    * Allow the substitution methods to receive a callback to 
+      obtain custom values
+
+Changes from 1.0.0 to 1.1.0
+---------------------------
+
+** New Feature
+    * New org.apache.felix.utils.collections.DictionaryAsMap class 
+      to wrap a Dictionary as a Map
+    * New org.apache.felix.utils.properties.InterpolationHelper to
+      interpolate a Map of properties using ${xx} replacements
+    * New org.apache.felix.utils.properties.Properties class to
+      load/save properties and allow editing them without loosing
+      the user formatting
